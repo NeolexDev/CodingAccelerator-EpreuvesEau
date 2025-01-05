@@ -31,7 +31,7 @@ def check_array_are_number(arr):
     return True
 
 if len(sys.argv) < 3:
-    print(f"Usage: python3 {sys.argv[0]} n1 n2 n3 ... ")
+    print(f"Usage: python3 {sys.argv[0]} n1 n2 ... ")
     sys.exit(-1)
 
 if check_array_are_number(sys.argv[1:]):
