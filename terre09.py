@@ -9,6 +9,10 @@ def is_number(char):
 
 def string_to_int(string):
     """ convert a string to an integer """
+    negativ = False
+    if string[0] == '-':
+        string = string[1:]
+        negativ = True
     i = len(string)
     count_tens = 0
     ret = 0
@@ -19,7 +23,9 @@ def string_to_int(string):
             ret += n *(10**count_tens)
             count_tens += 1
         i-=1
-    return ret
+    if not negativ:
+        return ret
+    return -ret
 
 
 def print_min_max(number1,number2):
